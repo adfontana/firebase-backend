@@ -10,10 +10,10 @@ export class UserDao extends Dao<User>{
     // --------------------------------------------------------------------------------------------
 
     static getInstance(): UserDao {
-        if (!UserDao.instance) {
-            UserDao.instance = new UserDao();
+        if (!this.instance) {
+            this.instance = new UserDao();
         }
-        return UserDao.instance;
+        return this.instance;
     }
 
     // --------------------------------------------------------------------------------------------
