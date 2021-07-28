@@ -20,11 +20,8 @@ export class DashboardService {
     // Public methods
     // --------------------------------------------------------------------------------------------
 
-    get(id?: string) {
-        if (id) {
-            return this.getDao().get(id);
-        }
-        return this.getDao().getList()
+    get() {
+        return this.getDao().get('data');
     }
 
     save(increment: 1 | -1, email?: string) {
