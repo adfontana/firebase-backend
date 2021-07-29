@@ -6,7 +6,7 @@ export class DashboardService {
     private static instance: DashboardService;
 
     // --------------------------------------------------------------------------------------------
-    // Public static mehods
+    // Public static methods
     // --------------------------------------------------------------------------------------------
 
     static getInstance(): DashboardService {
@@ -24,7 +24,14 @@ export class DashboardService {
         return this.getDao().get('data');
     }
 
+    /**
+     * Save dashboad data
+     * 
+     * @param increment increment or decrement total users
+     * @param email Email of the last user added
+    */
     save(increment: 1 | -1, email?: string) {
+        // Set email of the last user added
         if (email) {
             const data: Dashboard = {
                 lastUser: {

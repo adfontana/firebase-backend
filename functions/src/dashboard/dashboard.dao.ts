@@ -17,6 +17,12 @@ export class DashboardDao extends Dao<Dashboard>{
         return this.instance;
     }
 
+    /**
+     * Persist dashboard data
+     * 
+     * @param increment increment or decrement total users
+     * @param data Dashboard data to save in the database  
+    */
     save(increment: 1 | -1, data?: Dashboard) {
         // Increment or decrement the total of users in the database
         const totalUsers = firestore.FieldValue.increment(increment);
