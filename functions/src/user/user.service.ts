@@ -35,8 +35,11 @@ export class UserService {
         return this.getDao().getList()
     }
 
-    update(user: User) {
-        return this.getDao().update(user, user.id);
+    update(user: User, id?: string) {
+        if (!id) {
+            throw new Error("id is required");
+        }
+        return this.getDao().update(user, id);
     }
 
     // --------------------------------------------------------------------------------------------
