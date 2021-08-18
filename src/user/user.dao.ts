@@ -1,7 +1,7 @@
 import { Dao } from "../lib/dao";
 import { User } from "./user";
 
-export class UserDao extends Dao<User>{
+export class UserDao extends Dao<User> {
 
     private static instance: UserDao;
 
