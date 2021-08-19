@@ -1,7 +1,7 @@
 {
   "name": "functions",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --build --clean",
     "deploy": "firebase deploy --only functions",
     "start": "npm run build && firebase emulators:start --inspect-functions",
     "test": "jest --verbose=true"

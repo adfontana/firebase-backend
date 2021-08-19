@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { Post } from 'firebase-backend'
-import { UserService } from '../../user/user.service';
+import { UserService } from '../../modules/user/user.service';
 
 export default new Post(async (request: Request, response: Response) => {
     await UserService.getInstance().create(request.body);

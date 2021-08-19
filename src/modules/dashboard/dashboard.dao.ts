@@ -1,5 +1,5 @@
 import { firestore } from "firebase-admin";
-import { Dao } from "../lib/dao";
+import { Dao } from "../../shared/dao";
 import { Dashboard } from "./dashboard";
 
 export class DashboardDao extends Dao<Dashboard>{

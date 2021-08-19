@@ -1,4 +1,4 @@
-import { Dao } from "../lib/dao";
+import { Dao } from "../../shared/dao";
 import { User } from "./user";
 
 export class UserDao extends Dao<User> {
