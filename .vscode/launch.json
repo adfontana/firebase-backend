@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "attach",
+            "name": "Debug API",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\lib\\index.js",
+            "outFiles": [
+                "${workspaceFolder}/lib/**/*.js"
+            ]
+        }
+    ]
+}
